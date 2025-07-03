@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+
+% --- Packages ---
+\usepackage{xepersian}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue
+]{hyperref}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\setcounter{secnumdepth}{3}
+
+% --- Fonts ---
+\settextfont[Path=src/fonts/,Extension=.ttf]{XB Niloofar}
+\setlatintextfont[Scale=1.0]{Times New Roman} 
+\setdigitfont[Path=src/fonts/,Extension=.ttf]{XB Niloofar}
+
+% --- Paragraph and Spacing Settings ---
+\setlength{\headsep}{1.2cm}
+\linespread{1.4}
+
+% --- Header and Footer Style ---
+\pagestyle{fancy}
+\setlength{\headheight}{25pt}
+\fancyhf{}
+\fancyhead[L]{\projecttitle}
+\fancyhead[R]{پروژه درس \coursename}
+\fancyfoot[C]{\thepage}
+
+
+% --- Custom Command: Image Placement Helper ---
+\newcommand{\settingimage}[1]{
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{#1}
+	\end{center}
+}
